@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Player</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="merch.html">Merch</a>
+  <a href="kdfm.html">Gallery</a>
+</nav>
+
+<div class="player-container">
+
+  <!-- LEFT: NOW PLAYING -->
+  <div class="main-player">
+    <video id="player" controls width="600"></video>
+      <source src="music1.mp4" type="video/mp4">
+      <h4 id="date"></h4>
+      <h3 id="title"></h3>
+      <p id="description"></p>
+    
+
+    <h3 id="title"></h3>
+  </div>
+
+  <!-- RIGHT: PLAYLIST -->
+  <div class="playlist">
+  <p>Playlists</p>
+
+  <div class="song" onclick="playSong(
+  'video/BRONZE.mp4',
+  'BRONZE 4L - SINNEDZ (OMV)',
+  'Arranged & Engineered by KESOINOX | Mixed & Mastered by KESOINOX<br>Written & Performed by SINNEDZ'
+)">
+      <p>🎵 BRONZE 4L - SINNEDZ (OMV)</p>
+    </div>
+
+    <div class="song" onclick="playSong(
+    'video/moneyroll.mp4',
+    'SINNEDZ - MONEYROLL (VISUALIZER)',
+    'Arranged & Engineered by KESOINOX | Mixed & Mastered by KESOINOX<br>Written & Performed by SINNEDZ,' 
+)">
+      <p>🎵 SINNEDZ - MONEYROLL (VISUALIZER)</p>
+      
+    </div>
+
+    <div class="song" onclick="playSong('music3.mp4','Song 3')">
+      <p>🎵 Song 3</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

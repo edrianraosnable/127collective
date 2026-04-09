@@ -1,0 +1,302 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#000000;
+  color:white;
+}
+
+/* NAV */
+.nav{
+  padding:15px;
+  background:#111;
+  text-align:center;
+}
+
+.nav a{
+  color:white;
+  margin:10px;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:100vh;
+  overflow:hidden;
+}
+#bg-video{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index: -1;
+}
+
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.6), #070b14);
+}
+
+.hero-content{
+  position:relative;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:60px;
+}
+
+.hero-btns button{
+  margin:10px;
+  padding:12px 25px;
+  background:#111;
+  color:white;
+  border:none;
+  cursor: pointer;
+  transition: 0.7s ease;
+}
+.hero-btns button:hover{
+  background:#525151;
+  color:#fff;
+  transform: scale(1.1);
+   transition: 0.7s ease;
+}
+.headers-logo{
+  font-family: 'rubik spray paint', cursive;
+  font-size: 500px;
+  color: white;
+  text-shadow: 3px 3px 0 #000000, -3px 3px 0 #000000, 3px -3px 0 #000000, -3px -3px 0 #000000;
+
+  -webkit-text-stroke: 1px black;
+}
+
+
+/* SECTION */
+.section{
+  padding:50px;
+  text-align:center;
+}
+
+/* MUSIC */
+.music-card{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  background:#111;
+  padding:20px;
+  border-radius:10px;
+}
+
+.music-card img{
+  width:200px;
+}
+
+.progress{
+  height:5px;
+  background:#333;
+  margin:10px 0;
+}
+
+/* MERCH */
+.merch-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+
+.merch{
+  background:#272727;
+  padding:15px;
+  border-radius:12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.merch img{
+  width:100%;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+.merch:hover{
+  
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+.merch:hover img{
+  transform: scale(1.05);
+}
+
+
+/* BUTTON */
+.red{
+  background:#000000;
+  color:white;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+  transition: 0.3s ease;
+}
+.red:hover{
+  background:#484747;
+  color:#fff;
+  transform: scale(1.1);
+   transition: 0.3s ease;
+}
+
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{
+    font-size:30px;
+  }
+}
+.player-container{
+  display:flex;
+  gap:20px;
+  padding:20px;
+}
+
+/* LEFT PLAYER */
+.main-player{
+  bottom: 50px;
+  right: 50px;
+
+  width: 1000px;
+  max-width: 500px;
+  background: #000;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10000;
+  
+}
+
+.main-player video{
+  width:100%;
+  border-radius:10px;
+}
+
+/* RIGHT PLAYLIST */
+.playlist{
+  flex:1;
+  background:#111;
+  padding:10px;
+  border-radius:10px;
+  max-height:500px;
+  overflow-y:auto;
+  max-width: 500px;
+}
+
+.song{
+  padding:10px;
+  border-bottom:1px solid #333;
+  cursor:pointer;
+  transition: 0.3s ease;
+}
+
+.song:hover{
+  background:#222;
+  transform: scale(1.02);
+   transition: 0.3s ease;
+}
+/* ===== MOBILE FIX ===== */
+/* ===== GALLERY FIX ===== */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+  gap:10px;
+  padding:20px;
+}
+
+.card{
+  overflow:hidden;
+  cursor:pointer;
+  border:1px solid #222;
+  background:#000;
+}
+
+.card img,
+.card video{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  display:block;
+  transition:0.3s ease;
+}
+
+.card:hover img,
+.card:hover video{
+  transform:scale(1.1);
+  filter:brightness(70%);
+}
+
+/* VIEWER (POPUP FIX) */
+#viewer{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.95);
+  justify-content:center;
+  align-items:center;
+  z-index:99999; /* important para di matabunan */
+}
+
+#viewer img,
+#viewer video{
+  max-width:90%;
+  max-height:90%;
+}
+.album-name{
+  text-align:center;
+  padding:5px;
+  font-size:14px;
+}
+
+/* VIEWER UPGRADE */
+#viewer{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:black;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  z-index:99999;
+}
+
+#viewer img{
+  max-width:90%;
+  max-height:80%;
+}
+
+.close{
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+.prev, .next{
+  position:absolute;
+  top:50%;
+  font-size:40px;
+  cursor:pointer;
+  user-select:none;
+}
+
+.prev{ left:20px; }
+.next{ right:20px; }

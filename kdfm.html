@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Block Chronicles</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="music.html">Music</a>
+  <a href="merch.html">Merch</a>
+  <a href=""></a>
+</nav>
+
+<h1 class="title">🎬 From the Hood</h1>
+
+<div class="gallery">
+
+<!-- GALLERY-->
+ <div class="card" onclick="openAlbum(0)">
+    <img src="phtos/logo.jpg">
+    <p class="album-name">127 album</p>
+ </div>
+
+</div>
+
+<!-- VIEWER (POPUP) -->
+<div id="viewer">
+
+    <span class="close" onclick="closeViewer()">✖</span>
+    <span class="prev" onclick="prevImage()">❮</span>
+
+    <img id="viewImg">
+
+    <span class="next" onclick="nextImage()">❯</span>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
